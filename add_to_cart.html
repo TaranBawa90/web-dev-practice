@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+  <head>   
+    <style>
+      body {
+        background-image: url(https://images.openai.com/static-rsc-4/ud7LChtsZPOM4cK20HnL25sVhd6-AiDjmQwag5IeymIR9PfgCznGdqedtMvrGnDkrL606Mtwz7PLImLAAbYfEXvD-i80xFA1ur4Ev704BiUpSQTjEwW7qSExjdwQ0tXUsTIYjQuO-f_Q7vgRwvyjfLCz_kWnXcqorJly99YRasPKqldPuZVVU-a_YFhv3ScN?purpose=fullsize);
+        background-position: center;
+        background-size: cover;
+        position:static;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+      }
+      .logo {
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(248, 245, 245);
+      }
+      .nav-links {
+        display: flex;
+        gap: 60px;
+        list-style: none;
+      }
+      ul li a {
+        color: black;
+        text-decoration: none;
+      }
+      .login-btn {
+        background-color: rgb(42, 42, 42);
+        color: white;
+        height: 45px;
+        width: 78px;
+        font-size: medium;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .main {
+        color: black;
+        text-align: center;
+      }
+      .main h2 {
+        font-size: 40px;
+      }
+      .main p {
+        font-size: medium;
+      }
+      .cart {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 200px);
+        gap: 20px;
+      }
+      hr {
+        width: 90px;
+      }
+      .img1 {
+        height: 90px;
+        width: 90px;
+        border-radius: 100px;
+      }
+      .img2 {
+        height: 90px;
+        border-radius: 50px;
+      }
+      .img3 {
+        height: 90px;
+        border-radius: 1000px;
+      }
+      .img4 {
+        height: 90px;
+        width: 90px;
+        border-radius: 50px;
+      }
+      .salad,
+      .chicken,
+      .cashew,
+      .dressing {
+        background-color: rgb(216, 213, 213);
+        padding: 25px;
+        border-radius: 30px;
+        width: 140px;
+        text-align: center;
+      }
+      .section {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+      }
+      .add,
+      .sub {
+        height: 30px;
+        width: 30px;
+        background-color: rgb(236, 190, 65);
+        border-radius: 10px;
+        color: white;
+        margin: 1px;
+      }
+      button {
+        border: none;
+        font-size: 18px;
+      }
+      #count {
+        color: rgb(247, 251, 251);
+        background-color: rgb(236, 190, 65);
+        border-radius: 20px;
+        width: 23px;
+        height: 23px;
+        padding: 2px;
+        font-size: 15px;
+        top: -12px;
+        right: -6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="web">
+      <div class="nav">
+        <div class="logo">Foodie</div>
+
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Buy</a></li>
+        </ul>
+
+        <button class="login-btn">
+          <div id="count">0</div>
+          <div class="t">🛒 Cart</div>
+        </button>
+      </div>
+      <div class="main">
+        <h2>Wake Up Early,<br />Eat Fresh & Healthy</h2>
+        <p>
+          Aside from their natural good taste and great crunchy<br />tesxture
+          alongside wonderful colors and fragrances,<br />eating a large serving
+          of fresh.
+        </p>
+      </div>
+      <div class="cart">
+        <div class="salad">
+          <img
+            class="img1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsw2VMMO2TV9hnQ6Cfjr-bWX352jttlTn3lNB_axyTVA&s=10"
+          />
+          <p>Fresh and Healthy Salad</p>
+          <hr />
+          <p>60 calories .. 4 persons</p>
+          <hr />
+          <div class="section">
+            <p class="price">$2.65</p>
+            <div class="add_sub">
+              <button class="sub" onclick="sub()">-</button>
+              <button class="add" onclick="add()">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="chicken">
+          <img
+            class="img2"
+            src="https://hips.hearstapps.com/hmg-prod/images/lemonychickenkale-1656608777.jpg?crop=0.731xw:0.487xh;0.114xw,0.297xh&resize=640:*"
+          />
+          <p>Cashewnut Chicken Salad</p>
+          <hr />
+          <p>60 calories .. 4 persons</p>
+          <hr />
+          <div class="section">
+            <p class="price">$2.65</p>
+            <div class="add_sub">
+              <button class="sub" onclick="sub()">-</button>
+              <button class="add" onclick="add()">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="cashew">
+          <img
+            class="img3"
+            src="https://img.magnific.com/free-psd/vibrant-tofu-salad-bowl-with-cashews-chili_84443-64946.jpg?semt=ais_hybrid&w=740&q=80"
+          />
+          <p>Crunchy Cashew Salad</p>
+          <hr />
+          <p>60 calories .. 4 persons</p>
+          <hr />
+          <div class="section">
+            <p class="price">$2.65</p>
+            <div class="add_sub">
+              <button class="sub" onclick="sub()">-</button>
+              <button class="add" onclick="add()">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="dressing">
+          <img
+            class="img4"
+            src="https://plantedinthekitchen.com/wp-content/uploads/2022/01/Sesame-Salad-5.jpg"
+          />
+          <p>Sesame Dressing Salad</p>
+          <hr />
+          <p>60 calories .. 4 persons</p>
+          <hr />
+          <div class="section">
+            <p class="price">$2.65</p>
+            <div class="add_sub">
+              <button class="sub" onclick="sub()">-</button>
+              <button class="add" onclick="add()">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let count = 0;
+      function add() {
+        count++;
+        document.getElementById("count").innerHTML = count;
+      }
+      function sub() {
+        if (count > 0) {
+          count--;
+          document.getElementById("count").innerHTML = count;
+        }
+      }
+    </script>
+  </body>
+</html>
