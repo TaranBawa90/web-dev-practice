@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(https://t3.ftcdn.net/jpg/08/68/51/04/360_F_868510427_vsvN67LV1zSmLMyXMOFG05tRCmTAj1xL.jpg);
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      .login_page {
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar {
+        margin: 20px 0px 20px;
+        background-color: rgb(237, 238, 245);
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .img1 {
+        border-radius: 30px;
+        height: 45px;
+        margin: 10px;
+      }
+      .navbar p {
+        margin-right: 450px;
+        font-size: 25px;
+        font-weight: bolder;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        list-style: none;
+        font-size: 20px;
+      }
+      .srch {
+        height: 40px;
+        margin-left: 400px;
+      }
+      .form {
+        background-color: rgba(128, 128, 128, 0.5);
+        width: fit-content;
+        border-radius: 40px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 35%;
+        margin-top: 35px;
+      }
+      .heading {
+        color: white;
+        font-size: large;
+      }
+      p {
+        font-size: medium;
+        margin-top: 5px;
+      }
+      .form1 {
+        display: flex;
+        flex-direction: center;
+        justify-content: center;
+      }
+      .field {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+        border: 2px solid white;
+      }
+      button {
+        border-radius: 15px;
+        color: gray;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      #mail,
+      #key {
+        font-size: 12px;
+      }
+      label {
+        font-size: 18px;
+        color: black;
+      }
+      .login_btn {
+        display: flex;
+        flex-direction: center;
+        justify-content: center;
+      }
+      .btn {
+        background-color: rgb(247, 246, 244);
+        color: black;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 15px;
+        padding: 5px;
+      }
+      .footer {
+        display: flex;
+        flex-direction: center;
+        justify-content: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login_page">
+      <div class="navbar">
+        <img
+          class="img1"
+          src="https://thumbs.dreamstime.com/b/creative-simple-dragons-silhouettes-logo-stylized-vector-illustrations-simple-dragons-silhouettes-logo-130475058.jpg"
+        />
+        <p>Hacker</p>
+        <div class="lst">
+          <ul>
+            <li>Login</li>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Buy</li>
+          </ul>
+        </div>
+        <div class="search">
+          <img
+            class="srch"
+            src="https://cdn-icons-png.flaticon.com/512/1150/1150612.png"
+          />
+        </div>
+      </div>
+      <div class="form">
+        <div class="heading">
+          <h1>Welcome to Login page</h1>
+          <p>Please enter your details</p>
+        </div>
+        <div class="form1">
+          <form>
+            <label for="mail">Email</label><br />
+            <button>
+              <input
+                class="field"
+                type="email"
+                id="mail"
+                placeholder="Enter your mail"
+                required
+              /></button
+            ><br /><br />
+            <label for="key">Password</label><br />
+            <button>
+              <input
+                type="password"
+                class="field"
+                id="key"
+                placeholder="Enter password"
+                required
+              /></button
+            ><br /><br />
+            <input type="checkbox" id="Remember" /><label for="Remenber"
+              >Remember password</label
+            >
+          </form>
+        </div>
+        <span class="login_btn">
+          <button class="btn">Sign Up</button>
+        </span>
+        <span class="footer">
+          <footer class="no_account">
+            <p>Have no account</p>
+            <a href="#">Click here</a>
+          </footer>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
